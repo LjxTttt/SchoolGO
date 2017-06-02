@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/load"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateDrawable="@drawable/pbcolor" />
+
+    <newer.com.schoolgo.ui.diyview.SmartPullableLayout
+        android:id="@+id/pull_recy_refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+
+            android:id="@+id/school_recycle_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical" />
+    </newer.com.schoolgo.ui.diyview.SmartPullableLayout>
+
+    <include
+        android:id="@+id/net_work_refresh_id"
+        layout="@layout/net_work_refresh"
+        android:visibility="invisible" />
+</RelativeLayout>

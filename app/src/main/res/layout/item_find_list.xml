@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/MatchWrap"
+    android:layout_margin="5dp">
+
+    <RelativeLayout
+        style="@style/MatchWrap"
+        android:padding="8dp">
+
+        <cn.bingoogolapple.photopicker.widget.BGAImageView
+            android:id="@+id/bga_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="8dp"
+            android:src="@mipmap/logo"
+            app:bga_iv_circle="true" />
+
+        <TextView
+            android:id="@+id/tv_item_moment_username"
+            style="@style/MatchWrap"
+            android:layout_toRightOf="@id/bga_img"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="bingoogolapple"
+            android:textColor="#707EA3"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_item_moment_content"
+            style="@style/MatchWrap"
+            android:layout_below="@id/tv_item_moment_username"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@id/bga_img"
+            android:ellipsize="end"
+            android:maxLines="4"
+            android:textColor="#474747"
+            android:textSize="14sp"
+            tools:text="我是测试内容" />
+
+        <cn.bingoogolapple.photopicker.widget.BGANinePhotoLayout
+            android:id="@+id/nine_photo_layout"
+            style="@style/MatchWrap"
+            android:layout_below="@id/tv_item_moment_content"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/bga_img"
+            app:bga_npl_itemCornerRadius="0dp"
+            app:bga_npl_itemSpanCount="3"
+            app:bga_npl_itemWhiteSpacing="4dp"
+            app:bga_npl_itemWidth="0dp"
+            app:bga_npl_otherWhiteSpacing="64dp"
+            app:bga_npl_placeholderDrawable="@mipmap/bga_pp_ic_holder_light"
+            app:bga_npl_showAsLargeWhenOnlyOne="true" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/comment_recy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nine_photo_layout" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/comment_recy"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <EditText
+                android:id="@+id/comment_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:hint="@string/now_talk"
+                android:maxLines="1" />
+
+            <Button
+                android:id="@+id/commit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:text="@string/comment" />
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

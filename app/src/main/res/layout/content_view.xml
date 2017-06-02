@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tabcount="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <newer.com.schoolgo.ui.diyview.ViewPagerIndicator
+        android:id="@+id/tab_item"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/tabColor"
+        android:orientation="horizontal"
+        tabcount:lineColor="@color/selectColor"
+        tabcount:txtColor="@color/noromlText"
+        tabcount:txtSelectColor="@color/selectColor"
+        tabcount:visible_tab_count="3"></newer.com.schoolgo.ui.diyview.ViewPagerIndicator>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/content_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+</LinearLayout>

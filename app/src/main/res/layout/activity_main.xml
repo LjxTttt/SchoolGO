@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="newer.com.schoolgo.ui.activity.MainActivity">
+
+    <RadioGroup
+        android:id="@+id/bottom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:paddingTop="2dp"
+        android:weightSum="2">
+
+        <RadioButton
+            android:id="@+id/School"
+            style="@style/bottomTabStyle"
+            android:checked="true"
+            android:drawableTop="@drawable/select_school"
+            android:text="@string/school_str" />
+
+        <RadioButton
+            android:id="@+id/find"
+            style="@style/bottomTabStyle"
+            android:drawableTop="@drawable/select_find"
+            android:text="@string/find" />
+        <!--<RadioButton-->
+        <!--style="@style/bottomTabStyle"-->
+        <!--android:id="@+id/superMarket"-->
+        <!--android:drawableTop="@drawable/select_school"-->
+        <!--android:text="@string/sup_str"-->
+        <!--/>-->
+        <!--<RadioButton-->
+        <!--style="@style/bottomTabStyle"-->
+        <!--android:id="@+id/ToFriend"-->
+        <!--android:drawableTop="@drawable/select_school"-->
+        <!--android:text="@string/friend_str"-->
+        <!--/>-->
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/fragment_type_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_menu"
+        android:layout_alignParentTop="true"></FrameLayout>
+</RelativeLayout>

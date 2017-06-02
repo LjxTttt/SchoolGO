@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="title1" type="id" />
+    <item name="title2" type="id" />
+    <item name="title3" type="id" />
+    <item name="detail_content" type="id" />
+    <item name="img_grid" type="id" />
+    <item name="noneView" type="id" />
+</resources>
